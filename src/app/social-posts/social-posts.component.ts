@@ -35,6 +35,7 @@ export class SocialPostsComponent implements OnInit {
   toggleState = false;
   addAPostToggle() {
     this.toggleState = !this.toggleState;
+    
     /*console.log(this.toggleState);
     if(this.toggleState == false){
       this.toggleState = true;
@@ -44,7 +45,7 @@ export class SocialPostsComponent implements OnInit {
     }
     console.log(this.toggleState);
     return this.toggleState;
-*/
+    */
   }
 
   
