@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Post } from '../interfaces/post';
 
 @Component({
@@ -7,6 +7,8 @@ import { Post } from '../interfaces/post';
   styleUrls: ['./social-posts.component.css']
 })
 export class SocialPostsComponent implements OnInit {
+
+  @Input() showpost: boolean = false;
 
   constructor() { }
 
@@ -27,6 +29,22 @@ export class SocialPostsComponent implements OnInit {
         return;
       }
     }
+  }
+
+
+  toggleState = false;
+  addAPostToggle() {
+    this.toggleState = !this.toggleState;
+    /*console.log(this.toggleState);
+    if(this.toggleState == false){
+      this.toggleState = true;
+    }
+    if(this.toggleState == true){
+      this.toggleState = false;
+    }
+    console.log(this.toggleState);
+    return this.toggleState;
+*/
   }
 
   

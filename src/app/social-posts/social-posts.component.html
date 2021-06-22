@@ -1,2 +1,19 @@
-<app-post *ngFor="let x of allPosts" [aPost]="x" (deleted)=deleteAPost($event)></app-post>
-<app-post-form (submitted)=submitAPost($event)></app-post-form>
+<h1>Social Posts!!!</h1>
+<div>
+    <app-post *ngFor="let x of allPosts" [aPost]="x" (deleted)=deleteAPost($event)></app-post>
+</div>
+<br/>
+
+
+<ng-container *ngIf="toggleState==false">
+    <button (click)="addAPostToggle()">Add Post</button>
+</ng-container>
+
+<ng-container *ngIf="toggleState==true">
+    <button (click)="addAPostToggle()">Cancel Post</button>
+</ng-container>
+
+
+<div *ngIf="toggleState==true">
+    <app-post-form (submitted)=submitAPost($event)></app-post-form>
+</div>

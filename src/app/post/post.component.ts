@@ -8,7 +8,7 @@ import { Post } from '../interfaces/post';
 })
 export class PostComponent implements OnInit {
 
-  @Input() aPost: Post = { title: '', thought: ''}
+  @Input() aPost: Post = { title: '', thought: ''};
   @Output() deleted: EventEmitter<Post> = new EventEmitter<Post>();
   constructor() { }
 
