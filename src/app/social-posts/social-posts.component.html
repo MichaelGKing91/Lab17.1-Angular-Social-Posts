@@ -1,0 +1,2 @@
+<app-post *ngFor="let x of allPosts" [aPost]="x" (deleted)=deleteAPost($event)></app-post>
+<app-post-form (submitted)=submitAPost($event)></app-post-form>
